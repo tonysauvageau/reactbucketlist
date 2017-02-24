@@ -1,0 +1,5 @@
+extends layout
+block content 
+  #app(data-id = board._id, data-name = board.name)
+  - src = process.env.NODE_ENV === 'production' ? 'board.js' : 'http://localhost:8080/board.js'
+  script(src=src)
